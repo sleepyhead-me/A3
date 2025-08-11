@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saadat Notes - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Saadat Notes Logo" class="logo">
+            <h1>Saadat Notes</h1>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-toggle">☰</button>
+    </header>
+
+    <aside class="mobile-side-menu">
+        <button class="close-menu">×</button>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="admin-link"><a href="admin/login.html">Admin Login</a></li>
+        </ul>
+    </aside>
+
+    <main class="dashboard">
+        <section class="welcome-section">
+            <div class="search-container">
+                <input type="text" id="global-search" placeholder="Search notes, gallery, contacts...">
+                <button id="search-btn">Search</button>
+            </div>
+            <div id="personalized-welcome">
+                <h2>Welcome to Saadat Notes</h2>
+                <p>Department of Mathematics Resources Hub</p>
+            </div>
+            <div id="registration-form" class="hidden">
+                <h3>Personalize Your Experience</h3>
+                <form id="student-registration">
+                    <input type="text" id="student-name" placeholder="Your Name" required>
+                    <select id="academic-year" required>
+                        <option value="">Select Academic Year</option>
+                        <option value="1st">1st Year</option>
+                        <option value="2nd">2nd Year</option>
+                        <option value="3rd">3rd Year</option>
+                        <option value="4th">4th Year</option>
+                    </select>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <h3>Quick Access</h3>
+            <div class="link-grid">
+                <a href="notes.html" class="link-card">
+                    <img src="assets/images/notes-icon.png" alt="Notes">
+                    <span>Hand Notes</span>
+                </a>
+                <a href="gallery.html" class="link-card">
+                    <img src="assets/images/gallery-icon.png" alt="Gallery">
+                    <span>Gallery</span>
+                </a>
+                <a href="contact.html" class="link-card">
+                    <img src="assets/images/contact-icon.png" alt="Contact">
+                    <span>Contact Us</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Saadat Notes - Department of Mathematics</p>
+        <a href="admin/login.html" class="admin-login-link">Admin Login</a>
+    </footer>
+
+    <script src="js/firebase-init.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

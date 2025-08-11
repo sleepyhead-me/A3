@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saadat Notes - Hand Notes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Saadat Notes Logo" class="logo">
+            <h1>Saadat Notes</h1>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="notes.html" class="active">Notes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-toggle">☰</button>
+    </header>
+
+    <aside class="mobile-side-menu">
+        <button class="close-menu">×</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="notes.html" class="active">Notes</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="admin-link"><a href="admin/login.html">Admin Login</a></li>
+        </ul>
+    </aside>
+
+    <main class="notes-container">
+        <h2>Hand Notes</h2>
+        <p class="subtitle">Browse and download study materials for your courses</p>
+        
+        <div class="accordion">
+            <!-- 1st Year Notes -->
+            <div class="accordion-item">
+                <button class="accordion-header">1st Year Notes</button>
+                <div class="accordion-content">
+                    <div class="note-item">
+                        <div class="note-info">
+                            <h3>Calculus I</h3>
+                            <p>PDF • 2.4 MB</p>
+                        </div>
+                        <div class="note-actions">
+                            <button class="preview-btn" data-pdf="assets/pdfs/calculus-1.pdf">Preview</button>
+                            <a href="assets/pdfs/calculus-1.pdf" download class="download-btn">Download</a>
+                        </div>
+                    </div>
+                    <!-- More notes would be added here -->
+                </div>
+            </div>
+            
+            <!-- 2nd Year Notes -->
+            <div class="accordion-item">
+                <button class="accordion-header">2nd Year Notes</button>
+                <div class="accordion-content">
+                    <div class="note-item">
+                        <div class="note-info">
+                            <h3>Linear Algebra</h3>
+                            <p>PDF • 1.8 MB</p>
+                        </div>
+                        <div class="note-actions">
+                            <button class="preview-btn" data-pdf="assets/pdfs/linear-algebra.pdf">Preview</button>
+                            <a href="assets/pdfs/linear-algebra.pdf" download class="download-btn">Download</a>
+                        </div>
+                    </div>
+                    <!-- More notes would be added here -->
+                </div>
+            </div>
+            
+            <!-- More year sections would be added here -->
+        </div>
+    </main>
+
+    <!-- PDF Preview Modal -->
+    <div class="modal" id="pdf-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe id="pdf-viewer" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Saadat Notes - Department of Mathematics</p>
+        <a href="admin/login.html" class="admin-login-link">Admin Login</a>
+    </footer>
+
+    <script src="js/firebase-init.js"></script>
+    <script src="js/notes.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

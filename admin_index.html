@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saadat Notes - Admin Panel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="icon" href="../assets/images/logo.png">
+</head>
+<body class="admin-dashboard">
+    <header class="admin-header">
+        <div class="admin-header-left">
+            <img src="../assets/images/logo.png" alt="Saadat Notes Logo" class="logo">
+            <h1>Admin Panel</h1>
+        </div>
+        <nav class="admin-nav">
+            <a href="../index.html">View Site</a>
+            <a href="#" class="logout-link">Logout</a>
+        </nav>
+    </header>
+
+    <aside class="admin-sidebar">
+        <ul>
+            <li><a href="#" class="active" data-section="dashboard">Dashboard</a></li>
+            <li><a href="#" data-section="notes">Manage Notes</a></li>
+            <li><a href="#" data-section="gallery">Manage Gallery</a></li>
+            <li><a href="#" data-section="student-works">Student Works</a></li>
+        </ul>
+    </aside>
+
+    <main class="admin-main">
+        <section id="dashboard-section" class="admin-section active">
+            <h2>Dashboard Overview</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Notes</h3>
+                    <p id="total-notes">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Gallery Photos</h3>
+                    <p id="total-photos">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Student Works</h3>
+                    <p id="total-works">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="notes-section" class="admin-section">
+            <div class="section-header">
+                <h2>Manage Notes</h2>
+                <button id="add-note-btn" class="btn-primary">Add New Note</button>
+            </div>
+            <div class="content-list" id="notes-list">
+                <!-- Notes will be loaded here -->
+            </div>
+        </section>
+
+        <section id="gallery-section" class="admin-section">
+            <div class="section-header">
+                <h2>Manage Gallery Photos</h2>
+                <button id="add-photo-btn" class="btn-primary">Add New Photo</button>
+            </div>
+            <div class="content-list" id="gallery-list">
+                <!-- Gallery photos will be loaded here -->
+            </div>
+        </section>
+
+        <section id="student-works-section" class="admin-section">
+            <div class="section-header">
+                <h2>Manage Student Works</h2>
+                <button id="add-work-btn" class="btn-primary">Add New Work</button>
+            </div>
+            <div class="content-list" id="works-list">
+                <!-- Student works will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for adding/editing content -->
+    <div class="modal" id="content-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Add New Content</h2>
+            <form id="content-form">
+                <input type="hidden" id="content-id">
+                <input type="hidden" id="content-type">
+                
+                <div class="form-group">
+                    <label for="content-title">Title</label>
+                    <input type="text" id="content-title" required>
+                </div>
+                
+                <div class="form-group" id="description-group">
+                    <label for="content-description">Description</label>
+                    <textarea id="content-description" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group" id="file-group">
+                    <label for="content-file">File</label>
+                    <input type="file" id="content-file">
+                </div>
+                
+                <div class="form-group" id="year-group">
+                    <label for="content-year">Academic Year</label>
+                    <select id="content-year">
+                        <option value="1st">1st Year</option>
+                        <option value="2nd">2nd Year</option>
+                        <option value="3rd">3rd Year</option>
+                        <option value="4th">4th Year</option>
+                    </select>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" id="cancel-btn">Cancel</button>
+                    <button type="submit" class="btn-primary" id="submit-btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/firebase-init.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

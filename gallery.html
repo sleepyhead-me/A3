@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saadat Notes - Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Saadat Notes Logo" class="logo">
+            <h1>Saadat Notes</h1>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-toggle">☰</button>
+    </header>
+
+    <aside class="mobile-side-menu">
+        <button class="close-menu">×</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="admin-link"><a href="admin/login.html">Admin Login</a></li>
+        </ul>
+    </aside>
+
+    <main class="gallery-container">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="campus-life">Campus Life</button>
+            <button class="tab-button" data-tab="student-corner">Student Corner</button>
+        </div>
+        
+        <div class="tab-content active" id="campus-life">
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <!-- Slides will be loaded here by JavaScript -->
+                </div>
+                <div class="slideshow-controls">
+                    <button class="slideshow-prev">❮</button>
+                    <button class="slideshow-pause">⏸</button>
+                    <button class="slideshow-next">❯</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="student-corner">
+            <div class="works-list">
+                <!-- Student works will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Saadat Notes - Department of Mathematics</p>
+        <a href="admin/login.html" class="admin-login-link">Admin Login</a>
+    </footer>
+
+    <script src="js/firebase-init.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
